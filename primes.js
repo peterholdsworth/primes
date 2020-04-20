@@ -27,9 +27,10 @@ for ( var x = 3; ; x++ ) {
     }
     prime.push(x)
     multiple.push(firstMultiple) // this will always be the largest, right?
-    if (prime.length % 100000 === 0){
-      console.log( 'prime:', x, '#primes:', prime.length, 'P(n) / (n/ln(n))', prime.length / (x / Math.log(x)) );
-    }
+    // if (prime.length % 100000 === 0){
+    //   console.log( 'prime:', x, '#primes:', prime.length, 'P(n) / (n/ln(n))', prime.length / (x / Math.log(x)) );
+    // }
+    if (prime.length === 50000000) { process.exit(0); }
   } else {
     while (x === multiple[0]){
       // bump the multiple for the lowest
